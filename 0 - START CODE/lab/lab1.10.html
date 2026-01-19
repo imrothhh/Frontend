@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 1.10</title>
+  </head>
+  <body>
+    <h2>Search Filter</h2>
+    <input id="filterInput" type="text" placeholder="Search item..." />
+    <ul id="itemList"></ul>
+
+    <script>
+      let items = ["Book", "Pen", "Pencil", "Paper", "Backpack", "Laptop", "Phone"];
+
+      const filterInput = document.querySelector("#filterInput");
+      const itemList = document.querySelector("#itemList");
+
+      function render(filterText) {
+        const ft = (filterText ?? "").toLowerCase();
+
+        const filtered = items.filter((item) => item.toLowerCase().includes(ft));
+
+        itemList.innerHTML = "";
+        for (const item of filtered) {
+          const li = document.createElement("li");
+          li.textContent = item;
+          itemList.appendChild(li);
+        }
+      }
+
+      filterInput.addEventListener("input", () => {
+        render(filterInput.value);
+      });
+
+      render("");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 1.7</title>
+  </head>
+  <body>
+    <h2>Render List</h2>
+    <ul id="fruit-list"></ul>
+
+    <script>
+      let fruits = ["Apple", "Banana", "Orange", "Mango"];
+      const fruitList = document.querySelector("#fruit-list");
+
+      function renderFruits() {
+        fruitList.innerHTML = "";
+        for (const fruit of fruits) {
+          const li = document.createElement("li");
+          li.textContent = fruit;
+          fruitList.appendChild(li);
+        }
+      }
+
+      renderFruits();
+    </script>
+  </body>
+</html>

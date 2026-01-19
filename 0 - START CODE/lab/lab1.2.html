@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 1.2</title>
+    <style>
+      #box {
+        width: 120px;
+        height: 120px;
+        background: red;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Toggle box color</h2>
+    <div id="box"></div>
+    <button id="toggleBtn">Toggle</button>
+
+    <script>
+      const box = document.querySelector("#box");
+      const toggleBtn = document.querySelector("#toggleBtn");
+
+      toggleBtn.addEventListener("click", () => {
+        box.style.backgroundColor = box.style.backgroundColor === "red" ? "blue" : "red";
+      });
+    </script>
+  </body>
+</html>

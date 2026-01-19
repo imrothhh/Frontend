@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 1.8</title>
+  </head>
+  <body>
+    <h2>Add to List</h2>
+    <input id="fruitInput" type="text" placeholder="Add fruit" />
+    <button id="addFruitBtn">Add</button>
+    <ul id="fruit-list"></ul>
+
+    <script>
+      let fruits = ["Apple", "Banana", "Orange", "Mango"];
+
+      const fruitList = document.querySelector("#fruit-list");
+      const fruitInput = document.querySelector("#fruitInput");
+      const addFruitBtn = document.querySelector("#addFruitBtn");
+
+      function renderFruits() {
+        fruitList.innerHTML = "";
+        for (const fruit of fruits) {
+          const li = document.createElement("li");
+          li.textContent = fruit;
+          fruitList.appendChild(li);
+        }
+      }
+
+      addFruitBtn.addEventListener("click", () => {
+        const newFruit = fruitInput.value.trim();
+        if (newFruit === "") return;
+
+        fruits.push(newFruit);
+        fruitInput.value = "";
+        renderFruits();
+      });
+
+      renderFruits();
+    </script>
+  </body>
+</html>

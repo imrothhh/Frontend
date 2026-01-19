@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 1.5</title>
+    <style>
+      #lightBox {
+        width: 140px;
+        height: 140px;
+        border: 1px solid #ccc;
+        margin: 10px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Light Switch</h2>
+    <div id="lightBox"></div>
+    <p id="lightText"></p>
+    <button id="toggleLightBtn">Toggle Light</button>
+
+    <script>
+      let isLightOn = true;
+
+      const lightBox = document.querySelector("#lightBox");
+      const lightText = document.querySelector("#lightText");
+      const toggleLightBtn = document.querySelector("#toggleLightBtn");
+
+      function render() {
+        if (isLightOn) {
+          lightBox.style.backgroundColor = "white";
+          lightText.textContent = "Lights are ON";
+          lightText.style.color = "black";
+        } else {
+          lightBox.style.backgroundColor = "black";
+          lightText.textContent = "Lights are OFF";
+          lightText.style.color = "white";
+        }
+      }
+
+      toggleLightBtn.addEventListener("click", () => {
+        isLightOn = !isLightOn;
+        render();
+      });
+
+      render();
+    </script>
+  </body>
+</html>

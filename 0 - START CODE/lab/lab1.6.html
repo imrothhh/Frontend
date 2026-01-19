@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 1.6</title>
+  </head>
+  <body>
+    <h2>Object Rendering</h2>
+    <p>Name: <span id="userName"></span></p>
+    <p>Role: <span id="userRole"></span></p>
+    <button id="promoteBtn">Promote</button>
+
+    <script>
+      let user = { name: "Sok", role: "Student" };
+
+      const userName = document.querySelector("#userName");
+      const userRole = document.querySelector("#userRole");
+      const promoteBtn = document.querySelector("#promoteBtn");
+
+      function render() {
+        userName.textContent = user.name;
+        userRole.textContent = user.role;
+      }
+
+      promoteBtn.addEventListener("click", () => {
+        user.role = "Admin";
+        render();
+      });
+
+      render();
+    </script>
+  </body>
+</html>

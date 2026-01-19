@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 1.3</title>
+  </head>
+  <body>
+    <h2>Input Handling</h2>
+    <input id="nameInput" type="text" placeholder="Enter your name" />
+    <button id="sayHelloBtn">Say Hello</button>
+    <p id="message"></p>
+
+    <script>
+      const nameInput = document.querySelector("#nameInput");
+      const sayHelloBtn = document.querySelector("#sayHelloBtn");
+      const message = document.querySelector("#message");
+
+      sayHelloBtn.addEventListener("click", () => {
+        const name = nameInput.value.trim();
+
+        if (name === "") {
+          message.textContent = "Please enter a name";
+          message.style.color = "red";
+        } else {
+          message.textContent = `Hello, ${name}!`;
+          message.style.color = "black";
+        }
+      });
+    </script>
+  </body>
+</html>

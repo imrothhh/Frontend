@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 1.1</title>
+  </head>
+  <body>
+    <h1>Change me</h1>
+    <button>Click me</button>
+
+    <script>
+      const h1 = document.querySelector("h1");
+      const btn = document.querySelector("button");
+
+      btn.addEventListener("click", () => {
+        h1.textContent = "Javascript is fun!";
+      });
+    </script>
+  </body>
+</html>

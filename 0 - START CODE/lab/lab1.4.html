@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lab 1.4</title>
+  </head>
+  <body>
+    <h2>Counter</h2>
+    <p>Counter: <span id="counter-view">0</span></p>
+    <button id="incBtn">+</button>
+
+    <script>
+      let count = 0;
+      const counterView = document.querySelector("#counter-view");
+      const incBtn = document.querySelector("#incBtn");
+
+      function render() {
+        counterView.textContent = String(count);
+      }
+
+      incBtn.addEventListener("click", () => {
+        count++;
+        render();
+      });
+
+      render();
+    </script>
+  </body>
+</html>
