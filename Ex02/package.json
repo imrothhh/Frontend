@@ -1,0 +1,13 @@
+{
+  "name": "tester",
+  "version": "1.0.0",
+  "description": "Testing",
+  "main": "calculator.js",
+  "type": "module",
+  "scripts": {
+    "test": "node app.js",
+    "start": "node main.js"
+  },
+  "author": "roth",
+  "license": "ISC"
+}

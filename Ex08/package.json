@@ -1,0 +1,16 @@
+{
+  "name": "tester",
+  "version": "1.0.0",
+  "description": "Testing",
+  "main": "colorful.js",
+  "type": "module",
+  "scripts": {
+    "test": "node colorful.js",
+    "start": "node colorful.js"
+  },
+  "author": "roth",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}

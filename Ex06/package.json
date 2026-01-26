@@ -1,0 +1,13 @@
+{
+  "name": "tester",
+  "version": "1.0.0",
+  "description": "Testing",
+  "main": "paths.js",
+  "type": "module",
+  "scripts": {
+    "test": "node paths.js",
+    "start": "node paths.js"
+  },
+  "author": "roth",
+  "license": "ISC"
+}

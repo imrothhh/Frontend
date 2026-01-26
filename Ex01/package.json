@@ -1,0 +1,13 @@
+{
+  "name": "tester",
+  "version": "1.0.0",
+  "description": "Testing",
+  "main": "greeting.js",
+  "type": "module",
+  "scripts": {
+    "test": "node main.js",
+    "start": "node main.js"
+  },
+  "author": "roth",
+  "license": "ISC"
+}
